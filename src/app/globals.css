@@ -2,26 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply base bg-white dark:bg-black text-primary-color;
+  }
+  h1 {
+    @apply text-5xl lg:text-7xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply sm:text-3xl text-5xl font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-medium tracking-tight;
+  }
+  h4 {
+    @apply text-xl sm:text-lg font-medium tracking-tight;
+  }
+  p {
+    @apply base;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  /* TEXT STYLES */
+  .base {
+    @apply text-base leading-7;
+  }
+  .small {
+    @apply text-sm font-normal tracking-tight;
+  }
+  .text-primary-color {
+    @apply text-black dark:text-white;
+  }
+  .text-secondary-color {
+    @apply text-gray;
+  }
+
+  /* LAYOUTS  */
+  .layout-container {
+    @apply container mx-auto px-5;
+  }
+
+  .page-container {
+    @apply layout-container py-20 flex flex-col gap-10;
+  }
+
+  /* COMPONENT FOCUS */
+  .component-focus {
+    @apply ring-offset-secondary-extradark dark:ring-offset-secondary-extralight  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-secondary-extradark dark:focus-visible:ring-secondary-extralight focus-visible:ring-offset-1;
+  }
+
+  /* SCROLLABLE DIALOG OVERFLOW */
+
+  .dialogOverlay {
+    background: rgba(0 0 0 / 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+  }
+
+  .dialogContent {
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+  }
 }
