@@ -18,11 +18,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/Dialog';
-import { useToggle } from 'react-use';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/Popover';
 import { InfoIcon } from 'lucide-react';
 import DatePicker from '@/components/ui/form/DatePicker';
 import { useToast } from '@/hooks/useToast';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/Sheet';
 
 const selectOptions = [
   {
@@ -35,7 +42,6 @@ const selectOptions = [
 
 const Home = () => {
   const yupField = useFieldValidation();
-  const [open, toggle] = useToggle(false);
   const { toast } = useToast();
 
   const validSchema = yup.object().shape({
@@ -122,12 +128,12 @@ const Home = () => {
         </div>
       </section>
 
+      {/* DIALOG  */}
+
       <section>
         <h4 className="py-4">Dialog</h4>
-        <Dialog open={open} onOpenChange={toggle}>
-          <DialogTrigger>
-            <Button variant="secondary">Open dialog</Button>
-          </DialogTrigger>
+        <Dialog>
+          <DialogTrigger>Open dialog</DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Are you sure absolutely sure?</DialogTitle>
@@ -137,10 +143,27 @@ const Home = () => {
               </DialogDescription>
             </DialogHeader>
             <DialogFooter>
-              <Button onClick={toggle}>Delete account</Button>
+              <Button>Delete account</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
+      </section>
+
+      {/* Sheet  */}
+      <section>
+        <h4 className="py-4">Sheet</h4>
+        <Sheet>
+          <SheetTrigger>Open</SheetTrigger>
+          <SheetContent className="max-w-[400px]">
+            <SheetHeader>
+              <SheetTitle>Are you sure absolutely sure?</SheetTitle>
+              <SheetDescription>
+                This action cannot be undone. This will permanently delete your account and remove
+                your data from our servers.
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </section>
 
       {/* POPOVER */}
