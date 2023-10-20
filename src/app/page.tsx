@@ -56,7 +56,7 @@ const Home = () => {
     <main className="page-container min-h-screen">
       {/* INTRO  */}
       <section>
-        <h3>Template</h3>
+        <h3 className="h3">Template</h3>
         <p className="text-secondary-color">Created by Daniel Bílek</p>
         <p className="text-secondary-color">v0.1</p>
         <ThemeSwitcher />
