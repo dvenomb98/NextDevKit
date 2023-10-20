@@ -6,28 +6,27 @@
   body {
     @apply base bg-white dark:bg-black text-primary-color;
   }
-  h1 {
-    @apply text-5xl lg:text-7xl font-bold tracking-tight;
-  }
-  h2 {
-    @apply sm:text-3xl text-5xl font-bold tracking-tight;
-  }
-  h3 {
-    @apply text-2xl font-medium tracking-tight;
-  }
-  h4 {
-    @apply text-xl sm:text-lg font-medium tracking-tight;
-  }
-  p {
-    @apply base;
-  }
 }
 
 @layer components {
   /* TEXT STYLES */
+  .h1 {
+    @apply text-5xl lg:text-7xl font-bold tracking-tight;
+  }
+  .h2 {
+    @apply sm:text-3xl text-5xl font-bold tracking-tight;
+  }
+  .h3 {
+    @apply text-2xl font-medium tracking-tight;
+  }
+  .h4 {
+    @apply text-xl sm:text-lg font-medium tracking-tight;
+  }
+
   .base {
     @apply text-base leading-7;
   }
+
   .small {
     @apply text-sm font-normal tracking-tight;
   }

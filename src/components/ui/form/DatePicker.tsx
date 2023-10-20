@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Calendar } from '../calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '../popover';
+import { Calendar } from '../Calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '../Popover';
 import { Button } from '../Button';
 import { CalendarIcon } from 'lucide-react';
 import { useField, useFormikContext } from 'formik';
@@ -30,8 +30,8 @@ const DatePicker: FC<DatePickerProps> = ({ name, label }) => {
             variant={'outline'}
             className={cn(
               'w-full justify-start text-left font-normal border-divider dark:border-secondary-dark',
-              !!date ? 'text-black dark:text-white' : 'text-gray',
-              !!errorText
+              date ? 'text-black dark:text-white' : 'text-gray',
+              errorText
                 ? 'border-error dark:border-error'
                 : 'border-divider dark:border-secondary-dark',
             )}
