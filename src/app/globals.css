@@ -3,72 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply base bg-white dark:bg-black text-primary-color;
-  }
+	body {
+		@apply base bg-white dark:bg-black text-default-color leading-7 tracking-tight;
+	}
 }
 
 @layer components {
-  /* TEXT STYLES */
-  .h1 {
-    @apply text-5xl lg:text-7xl font-bold tracking-tight;
-  }
-  .h2 {
-    @apply sm:text-3xl text-5xl font-bold tracking-tight;
-  }
-  .h3 {
-    @apply text-2xl font-medium tracking-tight;
-  }
-  .h4 {
-    @apply text-xl sm:text-lg font-medium tracking-tight;
-  }
+	/* TEXT STYLES */
+	.h1 {
+		@apply text-4xl lg:text-5xl font-bold;
+	}
+	.h2 {
+		@apply sm:text-3xl text-4xl font-bold;
+	}
+	.h3 {
+		@apply text-2xl font-medium;
+	}
+	.h4 {
+		@apply text-xl sm:text-lg font-normal;
+	}
+	.base {
+		@apply text-base;
+	}
+	.small {
+		@apply text-sm font-normal;
+	}
+	.text-default-color {
+		@apply text-black dark:text-white;
+	}
 
-  .base {
-    @apply text-base leading-7;
-  }
+	/* LAYOUTS  */
+	.layout-container {
+		@apply container mx-auto px-5;
+	}
 
-  .small {
-    @apply text-sm font-normal tracking-tight;
-  }
-  .text-primary-color {
-    @apply text-black dark:text-white;
-  }
-  .text-secondary-color {
-    @apply text-gray;
-  }
+	.page-container {
+		@apply layout-container py-20 flex flex-col gap-16;
+	}
 
-  /* LAYOUTS  */
-  .layout-container {
-    @apply container mx-auto px-5;
-  }
+	/* COMPONENT FOCUS */
+	.component-focus {
+		@apply ring-offset-secondary-extradark dark:ring-offset-secondary-extralight  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-secondary-extradark dark:focus-visible:ring-secondary-extralight focus-visible:ring-offset-1;
+	}
 
-  .page-container {
-    @apply layout-container py-20 flex flex-col gap-10;
-  }
+	/* SCROLLABLE DIALOG OVERFLOW */
 
-  /* COMPONENT FOCUS */
-  .component-focus {
-    @apply ring-offset-secondary-extradark dark:ring-offset-secondary-extralight  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-secondary-extradark dark:focus-visible:ring-secondary-extralight focus-visible:ring-offset-1;
-  }
+	.dialogOverlay {
+		background: rgba(0 0 0 / 0.5);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: grid;
+		place-items: center;
+		overflow-y: auto;
+	}
 
-  /* SCROLLABLE DIALOG OVERFLOW */
-
-  .dialogOverlay {
-    background: rgba(0 0 0 / 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: grid;
-    place-items: center;
-    overflow-y: auto;
-  }
-
-  .dialogContent {
-    min-width: 300px;
-    background: white;
-    padding: 30px;
-    border-radius: 4px;
-  }
+	.dialogContent {
+		min-width: 300px;
+		background: white;
+		padding: 30px;
+		border-radius: 4px;
+	}
 }

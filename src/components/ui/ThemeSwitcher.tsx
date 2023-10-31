@@ -1,45 +1,56 @@
-'use client';
+"use client";
 
-import { useTheme } from 'next-themes';
-import React, { FC } from 'react';
-import { SunIcon, MoonIcon, ComputerIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useTheme } from "next-themes";
+import React, { FC, useEffect, useState } from "react";
+import { SunIcon,  Laptop, MoonStarIcon } from "lucide-react";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "./DropdownMenu";
+import { Button } from "./Button";
 
 const themes = [
-  {
-    value: 'light',
-    icon: SunIcon,
-  },
-  {
-    value: 'dark',
-    icon: MoonIcon,
-  },
-  {
-    value: 'system',
-    icon: ComputerIcon,
-  },
+	{
+		value: "light",
+		label: "Light",
+		icon: SunIcon,
+	},
+	{
+		value: "dark",
+		label: "Dark",
+		icon: MoonStarIcon,
+	},
+	{
+		value: "system",
+		label: "System",
+		icon: Laptop,
+	},
 ];
 
 const ThemeSwitcher: FC = () => {
-  const { theme, setTheme } = useTheme();
-  return (
-    <div className="flex gap-1">
-      {themes.map((t) => {
-        const ThemeIcon = t.icon;
+  const [mounted, setMounted] = useState(false)
+	const { theme, setTheme } = useTheme();
+	const currentTheme = themes.find((t) => t.value === theme);
+	const ThemeIcon = currentTheme?.icon
 
-        return (
-          <button
-            key={t.value}
-            aria-roledescription="Theme switcher"
-            onClick={() => setTheme(t.value)}
-            className="p-1"
-          >
-            <ThemeIcon className={cn('w-5 h-5', theme === t.value ? 'text-color' : 'text-gray')} />
-          </button>
-        );
-      })}
-    </div>
-  );
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+	return mounted && (
+		<div className="flex">
+			<DropdownMenu  >
+				<DropdownMenuTrigger asChild>
+					<Button variant="ghost">{!!ThemeIcon && <ThemeIcon className="w-4 h-4"/>}</Button>
+				</DropdownMenuTrigger>
+				<DropdownMenuContent>
+					{themes.map(({value, label}) => <DropdownMenuItem role="button" onClick={() => setTheme(value)} key={value}>{label}</DropdownMenuItem>)}
+				</DropdownMenuContent>
+			</DropdownMenu>
+		</div>
+	);
 };
 
 export default ThemeSwitcher;

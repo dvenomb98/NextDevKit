@@ -38,7 +38,7 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed lg:left-[50%] lg:top-[50%] sm:left-0 sm:bottom-0 z-50 grid w-full lg:max-w-lg lg:translate-x-[-50%] lg:translate-y-[-50%] gap-4 border border-divider/50 rounded-md bg-white p-6 shadow-lg duration-200 ',
+        'fixed lg:left-[50%] lg:top-[50%] sm:left-0 sm:bottom-0 z-50 grid w-full lg:max-w-lg lg:translate-x-[-50%] lg:translate-y-[-50%] gap-4 border border-divider rounded-md bg-white p-6 shadow-lg duration-200 ',
         'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 lg:data-[state=closed]:slide-out-to-left-1/2 sm:data-[state=closed]:slide-out-to-bottom-1/2  lg:data-[state=closed]:slide-out-to-top-[48%] lg:data-[state=open]:slide-in-from-left-1/2 lg:data-[state=open]:slide-in-from-top-[48%] sm:data-[state=open]:slide-in-from-bottom-[48%]',
         'dark:bg-secondary-extradark',
         className,
@@ -56,10 +56,7 @@ const DialogContent = React.forwardRef<
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn('flex flex-col space-y-1.5 text-center sm:text-left h4', className)}
-    {...props}
-  />
+  <div className={cn('flex flex-col space-y-1.5 text-center sm:text-left', className)} {...props} />
 );
 DialogHeader.displayName = 'DialogHeader';
 
@@ -75,7 +72,7 @@ const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Title ref={ref} className={cn(className)} {...props} />
+  <DialogPrimitive.Title ref={ref} className={cn('text-lg', className)} {...props} />
 ));
 DialogTitle.displayName = DialogPrimitive.Title.displayName;
 
