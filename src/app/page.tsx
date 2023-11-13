@@ -256,7 +256,7 @@ const Home = () => {
         <div>
           <h2 className="h2">Scalable utils and settings to save you time</h2>
           <p className="h4 text-muted-foreground">
-            Don't repeat yourself over and over again. Use what works over and over again.
+            Do not repeat yourself over and over again. Use what works over and over again.
           </p>
         </div>
 
