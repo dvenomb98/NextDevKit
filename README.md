@@ -55,4 +55,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Author
 
-NextDevKit is developed by Daniel Bilek. Learn more about his work at danielbilek.com.
+NextDevKit is developed by Daniel Bilek. Learn more about his work at [danielbilek.com](https://danielbilek.com).

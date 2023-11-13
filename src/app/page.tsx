@@ -40,7 +40,6 @@ import { cn } from '@/lib/utils';
 //
 //
 
-
 const selectOptions = [
   {
     value: 'dark',
@@ -82,11 +81,7 @@ const Home = () => {
             NextDevKit: The Ultimate NextJS Starter App for Efficient Development
           </p>
           <Button size={'lg'} asChild className="w-fit">
-            <a href="https://github.com/dvenomb98/next-app-starter">
-
-           
-            View on Github
-            </a>
+            <a href="https://github.com/dvenomb98/next-app-starter">View on Github</a>
           </Button>
         </div>
       </section>
@@ -113,7 +108,7 @@ const Home = () => {
               <Button loading>Loading</Button>
             </CardContent>
           </Card>
-          {/* form*/ }
+          {/* form*/}
           <Card>
             <CardHeader>
               <CardTitle>Form</CardTitle>
@@ -188,7 +183,9 @@ const Home = () => {
             </CardHeader>
             <CardContent className="grid grid-cols-2 gap-4">
               <Dialog>
-                <DialogTrigger className={buttonVariants({variant: "outline"})}>Open dialog</DialogTrigger>
+                <DialogTrigger className={buttonVariants({ variant: 'outline' })}>
+                  Open dialog
+                </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle>Are you sure absolutely sure?</DialogTitle>
@@ -203,7 +200,9 @@ const Home = () => {
               </Dialog>
 
               <Sheet>
-                <SheetTrigger className={buttonVariants({variant: "outline"})}>Open sheet</SheetTrigger>
+                <SheetTrigger className={buttonVariants({ variant: 'outline' })}>
+                  Open sheet
+                </SheetTrigger>
                 <SheetContent className="max-w-[400px]">
                   <SheetHeader>
                     <SheetTitle>Are you sure absolutely sure?</SheetTitle>
@@ -217,7 +216,7 @@ const Home = () => {
 
               <Popover>
                 <PopoverTrigger>
-                  <div className={cn(buttonVariants({variant: "outline"}), "w-full")}>
+                  <div className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}>
                     <InfoIcon className="w-5 h-5  mr-2" />
                     <span>More information</span>
                   </div>
@@ -252,29 +251,39 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='flex flex-col gap-10'>
+      <section className="flex flex-col gap-10">
         {/* UTILS */}
         <div>
           <h2 className="h2">Scalable utils and settings to save you time</h2>
-          <p className="h4 text-muted-foreground">Don't repeat yourself over and over again. Use what works over and over again.</p>
+          <p className="h4 text-muted-foreground">
+            Don't repeat yourself over and over again. Use what works over and over again.
+          </p>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-1 gap-5'>
+        <div className="grid grid-cols-1 sm:grid-cols-1 gap-5">
           <Card>
             <CardHeader>
               <CardTitle>Utils</CardTitle>
             </CardHeader>
-            <CardContent className='grid grid-cols-1 text-muted-foreground'>
-              <p><span className='text-foreground'>genPageMetaData()</span> - Generate metadata</p>
-              <p><span className='text-foreground'>cn()</span> - Merge classnames</p>
-              <p><span className='text-foreground'>cva()</span> - Build amazing components variants</p>
-              <p><span className='text-foreground'>useValidation()</span> - Validate your form</p>
-              <p><span className='text-foreground'>useToast()</span> - Call your toasts</p>
+            <CardContent className="grid grid-cols-1 text-muted-foreground">
+              <p>
+                <span className="text-foreground">genPageMetaData()</span> - Generate metadata
+              </p>
+              <p>
+                <span className="text-foreground">cn()</span> - Merge classnames
+              </p>
+              <p>
+                <span className="text-foreground">cva()</span> - Build amazing components variants
+              </p>
+              <p>
+                <span className="text-foreground">useValidation()</span> - Validate your form
+              </p>
+              <p>
+                <span className="text-foreground">useToast()</span> - Call your toasts
+              </p>
             </CardContent>
           </Card>
-
         </div>
-
       </section>
 
       {/* DIALOG  */}
