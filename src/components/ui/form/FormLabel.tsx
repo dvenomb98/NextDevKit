@@ -6,7 +6,7 @@ interface FormLabelProps extends LabelHTMLAttributes<any> {
 
 const FormLabel: FC<FormLabelProps> = ({ htmlFor, label, ...props }) => {
   return (
-    <label htmlFor={htmlFor} {...props} className="small text-gray">
+    <label htmlFor={htmlFor} {...props} className="text-sm text-muted-foreground">
       {label}
     </label>
   );

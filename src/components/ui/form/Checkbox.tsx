@@ -22,7 +22,6 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
     const errorText = meta.error && meta.touched ? meta.error : '';
     const id = `${name}-${field.name}`;
 
-    console.log(field.value);
     return (
       <InputWrapper>
         <div className="items-top flex space-x-2">
@@ -33,11 +32,8 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
             id={id}
             ref={ref}
             className={cn(
-              'peer h-4 w-4 shrink-0 rounded-sm border',
-              'component-focus disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-secondary-dark dark:data-[state=checked]:bg-secondary-extralight',
-              'data-[state=checked]:text-white dark:data-[state=checked]:text-black',
-              !!errorText ? 'border-error' : 'border-divider',
-
+              "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+              !!errorText && 'border-destructive',
               className,
             )}
             {...props}
@@ -57,7 +53,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
                 {label}
               </label>
             )}
-            {!!description && <p className="small text-gray leading-none">{description}</p>}
+            {!!description && <p className="text-sm leading-none text-muted-foreground">{description}</p>}
           </div>
         </div>
         <ErrorText text={errorText} />

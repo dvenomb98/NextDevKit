@@ -6,7 +6,7 @@ interface ErrorTextProps {
 
 const ErrorText: FC<ErrorTextProps> = ({ text }) => {
   if (!text) return null;
-  return <p className="small text-error ml-2">{text}</p>;
+  return <p className="text-sm text-destructive ml-2">{text}</p>;
 };
 
 export default ErrorText;

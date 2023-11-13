@@ -37,7 +37,7 @@ const SelectInput: FC<SelectInputProps> = ({ name, options, placeholder, label }
           value={field.value}
           defaultValue={field.value}
         >
-          <SelectTrigger className={cn('w-full', !!errorText && 'border-error dark:border-error')}>
+          <SelectTrigger className={cn('w-full', !!errorText && 'border-destructive dark:border-destructive')}>
             <SelectValue placeholder={placeholder && placeholder} />
           </SelectTrigger>
           <SelectContent>

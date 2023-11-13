@@ -29,11 +29,11 @@ const DatePicker: FC<DatePickerProps> = ({ name, label }) => {
           <Button
             variant={'outline'}
             className={cn(
-              'w-full justify-start text-left font-normal border-divider dark:border-secondary-dark',
-              date ? 'text-black dark:text-white' : 'text-gray',
-              errorText
-                ? 'border-error dark:border-error'
-                : 'border-divider dark:border-secondary-dark',
+              "w-full justify-start text-left font-normal",
+              !date && "text-muted-foreground",
+              !!errorText
+                && 'border-destructive dark:border-destructive'
+           
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />

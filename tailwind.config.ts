@@ -1,7 +1,3 @@
-import type { Config } from "tailwindcss";
-const { createThemes } = require("tw-colors");
-const { fontFamily } = require("tailwindcss/defaultTheme");
-
 const BREAKPOINTS = {
 	SM: {
 		MIN: 0,
@@ -13,53 +9,16 @@ const BREAKPOINTS = {
 	},
 };
 
-const defaultColors = {
-	error: {
-		light: "#e57373",
-		DEFAULT: "#f44336",
-		dark: "#d32f2f",
-	},
-	warning: {
-		light: "#ffb74d",
-		DEFAULT: "#ffa726",
-		dark: "#f57c00",
-	},
-	info: {
-		light: "#4fc3f7",
-		DEFAULT: "#29b6f6",
-		dark: "#0288d1",
-	},
-	success: {
-		light: "#81c784",
-		DEFAULT: "#66bb6a",
-		dark: "#388e3c",
-	},
-	secondary: {
-		extralight: "#f9fafb", // 50
-		light: "#f4f4f5", // 100
-		DEFAULT: "#71717a", // 500
-		dark: "#27272a", // 800
-		extradark: "#09090b", // 950
-	},
-};
-
-const primaryColors = {
-	primary: {
-		light: "#bfdbfe",
-		DEFAULT: "#3b82f6",
-		dark: "#1e3a8a",
-	},
-};
-
-const config: Config = {
-	darkMode: "class",
-	content: [
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/app/providers/**/*.{js,ts,jsx,tsx,mdx}",
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    '.src/components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
 	],
-	theme: {
-		screens: {
+  theme: {
+    screens: {
 			sm: { max: `${BREAKPOINTS.SM.MAX}px` },
 			lg: `${BREAKPOINTS.LG.MIN}px`,
 		},
@@ -69,52 +28,62 @@ const config: Config = {
 				lg: `${BREAKPOINTS.LG.MIN}px`,
 			},
 		},
-		fontFamily: {
-			sans: ["Inter", ...fontFamily.sans],
-		},
-		fontWeight: {
-			light: "200",
-			normal: "400",
-			medium: "500",
-			bold: "700",
-		},
-		extends: {
-			keyframes: {
-				"accordion-down": {
-					from: { height: 0 },
-					to: { height: "var(--radix-accordion-content-height)" },
-				},
-				"accordion-up": {
-					from: { height: "var(--radix-accordion-content-height)" },
-					to: { height: 0 },
-				},
-			},
-			animation: {
-				"accordion-down": "accordion-down 0.2s ease-out",
-				"accordion-up": "accordion-up 0.2s ease-out",
-			},
-		},
-	},
-	plugins: [
-		createThemes({
-			light: {
-				black: "#000000",
-				white: "#FFFFFF",
-				gray: "#666",
-				divider: "#d1d5db",
-				...primaryColors,
-				...defaultColors,
-			},
-			dark: {
-				black: "#000000",
-				white: "#FFFFFF",
-				gray: "#888",
-				divider: "#27272a",
-				...primaryColors,
-				...defaultColors,
-			},
-		}),
-		require("tailwindcss-animate"),
-	],
-};
-export default config;
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
