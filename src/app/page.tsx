@@ -81,8 +81,12 @@ const Home = () => {
           <p className="h4 text-muted-foreground">
             NextDevKit: The Ultimate NextJS Starter App for Efficient Development
           </p>
-          <Button size={'lg'} className="w-fit">
+          <Button size={'lg'} asChild className="w-fit">
+            <a href="https://github.com/dvenomb98/next-app-starter">
+
+           
             View on Github
+            </a>
           </Button>
         </div>
       </section>
