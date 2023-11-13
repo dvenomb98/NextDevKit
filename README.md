@@ -6,22 +6,30 @@ Enriched with a number of enhancements to ensure fast and easy development with 
 
 #### Enhancements:
 
-- Ready-made basic and fully flexible components and hooks such as form validation, buttons, date pickers, dialogs, toasts... built on the ShadCN-UI and Tailwind
+- Pre-configured with essential components and utilities
 - Fully functional and ready dark mode, possibility of extending it for other themes
-- Prettier and husky, linting before commit
+- Integrated Prettier setup for consistent code formatting
+
 - Essential packages like formik, lucide, react-use, cslx, date-fns...
 - Seo configuration with zero effort
 - Time saving utils for daily use
 
 ### Getting Started
-First, run the development server:
 
 ```bash
+# Clone the repository
+git clone https://github.com/[YourUsername]/nextdevkit.git
+
+# Navigate to the project directory
+cd nextdevkit
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# Open http://localhost:3000 with your browser to see the result.
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -44,3 +52,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Author
+
+NextDevKit is developed by Daniel Bilek. Learn more about his work at danielbilek.com.
