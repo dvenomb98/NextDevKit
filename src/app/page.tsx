@@ -255,12 +255,12 @@ const Home = () => {
           <p className="h4 text-muted-foreground">Don't repeat yourself over and over again. Use what works over and over again.</p>
         </div>
 
-        <div className='grid grid-cols-2 sm:grid-cols-1 gap-5'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 gap-5'>
           <Card>
             <CardHeader>
               <CardTitle>Utils</CardTitle>
             </CardHeader>
-            <CardContent className='grid grid-cols-1 text-muted-foreground '>
+            <CardContent className='grid grid-cols-1 text-muted-foreground'>
               <p><span className='text-foreground'>genPageMetaData()</span> - Generate metadata</p>
               <p><span className='text-foreground'>cn()</span> - Merge classnames</p>
               <p><span className='text-foreground'>cva()</span> - Build amazing components variants</p>
