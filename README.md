@@ -1,14 +1,17 @@
+# NextDevKit
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Enriched with a number of enhancements to ensure fast and easy development with minimal setup. 
 
 #### Enhancements:
 
-- Ready-made basic and fully flexible components and hooks such as form validation, buttons, date pickers, dialogs, toasts... built on the base of shadcn ui
+- Ready-made basic and fully flexible components and hooks such as form validation, buttons, date pickers, dialogs, toasts... built on the ShadCN-UI and Tailwind
 - Fully functional and ready dark mode, possibility of extending it for other themes
-- Basic improved tailwind configuration
 - Prettier and husky, linting before commit
-- Essential packages like formik, lucide, react-use, cslx..
+- Essential packages like formik, lucide, react-use, cslx, date-fns...
+- Seo configuration with zero effort
+- Time saving utils for daily use
 
 ### Getting Started
 First, run the development server:
