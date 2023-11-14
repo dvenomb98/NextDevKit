@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Enriched with a number of enhancements to ensure fast and easy development with minimal setup. 
 
-### Features 💻
+### Features  💻
 - NextJS with Typescript
 - Pre-configured with essential components and utilities
 - Fully functional and ready dark mode, possibility of extending it for other themes
@@ -17,7 +17,7 @@ Enriched with a number of enhancements to ensure fast and easy development with 
 - Seo configuration with zero effort
 - Time saving utils for daily use
 
-### Getting Started 🚀
+### Getting Started  🚀
 
 ```bash
 npx create-next-app --example next-dev-kit my-app-name
@@ -25,23 +25,23 @@ npx create-next-app --example next-dev-kit my-app-name
 yarn create next-app --example next-dev-kit my-app-name
 # or
 pnpm create next-app --example next-dev-kit my-app-name
-
-
 ```
 
-### Run NextJS in development mode 💣
+### Run NextJS in development mode  💣
 
 ```bash
 npm install
 npm run dev
+
 # or
+
 yarn install
 yarn dev
 
 # Open http://localhost:3000 with your browser to see the result.
 ```
 
-### Configure ⚙️
+### Configure  ⚙️
 
  - Delete content of src/app/page.tsx
  - Delete src/components/starter folder
