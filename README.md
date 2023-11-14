@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Enriched with a number of enhancements to ensure fast and easy development with minimal setup. 
 
-### Features
+### Features 💻
 - NextJS with Typescript
 - Pre-configured with essential components and utilities
 - Fully functional and ready dark mode, possibility of extending it for other themes
