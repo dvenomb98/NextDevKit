@@ -4,37 +4,40 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Enriched with a number of enhancements to ensure fast and easy development with minimal setup. 
 
-#### Enhancements:
-
+### Features
+- NextJS with Typescript
 - Pre-configured with essential components and utilities
 - Fully functional and ready dark mode, possibility of extending it for other themes
 - Integrated Prettier setup for consistent code formatting
-
-- Essential packages like formik, lucide, react-use, cslx, date-fns...
+- Mobile-friendy, responsive design
+- Font optimization with next/font
+- Essential packages pre-configured for you
 - Seo configuration with zero effort
 - Time saving utils for daily use
 
 ### Getting Started
 
 ```bash
-# Clone the repository
-git clone https://github.com/[YourUsername]/nextdevkit.git
-
-# Navigate to the project directory
-cd nextdevkit
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
+npx create-next-app --example next-dev-kit my-app-name
+# or
+yarn create next-app --example next-dev-kit my-app-name
+# or
+pnpm create next-app --example next-dev-kit my-app-name
 
 # Open http://localhost:3000 with your browser to see the result.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run NextJS in Development mode
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+# or
+yarn install
+yarn dev
+```
+
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

@@ -49,7 +49,8 @@ const selectOptions = [
   { value: 'system', label: 'System' },
 ];
 
-const Home = () => {
+export default function Home() {
+  
   const yupField = useFieldValidation();
   const { toast } = useToast();
 
@@ -289,6 +290,4 @@ const Home = () => {
       {/* DIALOG  */}
     </main>
   );
-};
-
-export default Home;
+}
