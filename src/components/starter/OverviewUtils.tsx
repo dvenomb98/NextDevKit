@@ -14,7 +14,7 @@ const OverviewUtils: FC = () => {
       <ul className="flex flex-col gap-5 text-muted-foreground">
        
             <li>
-              <span className="text-foreground h4">genliageMetaData()</span> - Generate metadata
+              <span className="text-foreground h4">genPageMetaData()</span> - Generate metadata
             </li>
             <li>
               <span className="text-foreground h4">cn()</span> - Merge classnames
