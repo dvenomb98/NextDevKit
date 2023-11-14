@@ -27,7 +27,7 @@ pnpm create next-app --example next-dev-kit my-app-name
 # Open http://localhost:3000 with your browser to see the result.
 ```
 
-### Run NextJS in Development mode
+### Run NextJS in development mode
 
 ```bash
 npm install
@@ -37,7 +37,11 @@ yarn install
 yarn dev
 ```
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+### Configure 
+
+ - Delete content of src/app/page.tsx
+ - Delete src/components/starter folder
+ - Configure src/data/siteMetadata for SEO data
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

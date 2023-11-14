@@ -5,8 +5,8 @@ const siteMetada = {
         description: "The Ultimate NextJS Starter App for Efficient Development",
         language: "en",
         theme: "system", // system, dark or light
-        siteUrl: "https://danielbilek.com",
-        siteLogo: "/static/images/vercel.png",
+        siteUrl: "https://next-dev-kit.vercel.app",
+        siteLogo: "public/vercel.png",
         locale: "en",
 }
 

@@ -4,11 +4,11 @@ import { Popover, PopoverContent, PopoverTrigger } from '../Popover';
 import { Button } from '../Button';
 import { CalendarIcon } from 'lucide-react';
 import { useField, useFormikContext } from 'formik';
-import moment from 'moment';
 import InputWrapper from './InputWrapper';
 import FormLabel from './FormLabel';
 import { cn } from '@/lib/utils';
 import ErrorText from './ErrorText';
+import { format } from 'date-fns';
 
 interface DatePickerProps {
   name: string;
@@ -37,14 +37,14 @@ const DatePicker: FC<DatePickerProps> = ({ name, label }) => {
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />
-            {date ? moment(date).format('MMMM Do YYYY') : <span>Pick a date</span>}
+            {date ? format(date, 'MMMM dd, yyyy') : <span>Pick a date</span>}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0">
           <Calendar
             mode="single"
             selected={date}
-            onSelect={(e) => setFieldValue(name, moment(e))}
+            onSelect={(e) => setFieldValue(name,e)}
             initialFocus
           />
         </PopoverContent>

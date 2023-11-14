@@ -23,6 +23,7 @@ module.exports = {
 			lg: `${BREAKPOINTS.LG.MIN}px`,
 		},
 		container: {
+      
 			screens: {
 				sm: { max: `${BREAKPOINTS.SM.MAX}px` },
 				lg: `${BREAKPOINTS.LG.MIN}px`,

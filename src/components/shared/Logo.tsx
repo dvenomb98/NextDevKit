@@ -9,8 +9,7 @@ const Logo: FC = () => {
 		<Link href={URLS.HOMEPAGE} className="flex items-center gap-2 component-focus rounded-md">
 			<ZapIcon className="w-5 h-5 fill-current" />
 			<h1 className="inline-flex flex-col gap-0 leading-none font-medium">
-				<span>DA</span>
-				<span className="font-bold">NIEL.</span>
+				<p>NextDev<span className="font-bold">Kit.</span></p>
 			</h1>
 		</Link>
 	);
